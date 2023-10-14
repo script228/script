@@ -6,7 +6,9 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 options = Options()
-options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--headless=new")
 driver = webdriver.Chrome(options)
 driver.get("https://достижения.рф/achievements/region/601")
 t = 0
